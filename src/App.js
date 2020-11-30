@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
-import 'uikit/dist/css/uikit.css';
-import Navbar from './components/navbar';
-import './App.css';
+import React, { Component } from 'react'
+import 'uikit/dist/css/uikit.css'
+import Navbar from './components/navbar'
+import Presentation from './components/presentation'
+import Skills from './components/skills'
+import './App.css'
 
 class App extends Component {
   render() {
@@ -10,16 +12,15 @@ class App extends Component {
         <header className="App-header">
           <Navbar/>
         </header>
-        <session>
-          <article className="building">
-            <h2>Em construção</h2>
-            <img src={'images/build.svg'}/>
-          </article>
-          
+        <session style={{ height: 'calc(100vh - 10px)', display: 'flex', alignItems: 'center', justifyContent: 'center' }} >
+          <Presentation />
+        </session>
+        <session style={{ height: 'calc(100vh - 150px)', display: 'flex', alignItems: 'center', justifyContent: 'center' }} >
+          <Skills />
         </session>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
